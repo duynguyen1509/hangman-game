@@ -2,13 +2,19 @@ key = "duynguyen" # create your own key
 guesses = ""
 turns = 3 # number of turns you give your friend
 count = 0
+typed_character=""
 
 while turns > 0:
     guess = input("guess a character ") # ask your friend to enter a character
 
-    while len(guess)>1: # check if the guess is valid
-        print("the guess contains 1 character")
+    while len(guess)>1 : # check if the guess is valid
+        print("the guess is not valid")
         guess = input("please enter again ")
+
+    typed_character += guess # show what you have typed
+    print("you typed:")
+    for char in typed_character:
+        print(char,end="\n")
 
     if guess in key: # check if the guessed character is true
         guesses += guess
