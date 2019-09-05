@@ -7,11 +7,13 @@ typed_character=""
 while turns > 0:
     guess = input("guess a character ") # ask your friend to enter a character
 
-    while len(guess)>1 : # check if the guess is valid
+    # check if the guess is valid
+    while len(guess)>1 : 
         print("the guess is not valid")
         guess = input("please enter again ")
 
-    typed_character += guess # show what you have typed
+    # show what you have typed
+    typed_character += guess 
     print("you typed:")
     for char in typed_character:
         print(char,end="\n")
