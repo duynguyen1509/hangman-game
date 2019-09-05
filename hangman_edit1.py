@@ -18,20 +18,23 @@ while turns > 0:
     for char in typed_character:
         print(char,end="\n")
 
-    if guess in key: # check if the guessed character is true
+    # check if the guessed character is true
+    if guess in key: 
         guesses += guess
     else:
         turns -= 1
         print("Wrong! You have " + str(turns) + " turns left")
 
-    for char in key: # display of the game
+    # display of the game
+    for char in key: 
         if char in guesses:
             print(char, end=" ")
             count += 1
         else:
             print("_", end=" ")
 
-    if count == len(key): # check if you already won
+    # check if you already won
+    if count == len(key): 
         print("you won")
         break
     count = 0
